@@ -66,16 +66,13 @@ object GunpowderPermissionProvider : PermissionProvider, SuggestionProvider<Serv
 
     override fun supportsTimedGroups() = false
 
-    override fun supportsPerWorldPermissions(): Boolean = false
+    override fun supportsPerWorldPermissions() = false
 
-    override fun supportsPerWorldGroups(): Boolean = false
-    override fun supportsOfflineChecks(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun supportsPerWorldGroups() = false
+    
+    override fun supportsOfflineChecks() = true
 
-    override fun supportsChangingPlayersPermissions(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun supportsChangingPlayersPermissions() = true
 
     override fun getPriority(): PermissionProvider.Priority = PermissionProvider.Priority.MAIN
 
