@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "gunpowder-permissions",
+  "version": "${version}",
+  "name": "Gunpowder Permissions",
+  "description": "Gunpowder Permissions Module",
+  "license": "MIT",
+  "icon": "assets/gunpowder/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "gunpowder:modules": [
+      {
+        "adapter": "kotlin",
+        "value": "io.github.gunpowder.GunpowderPermissionsModule"
+      }
+    ],
+    "permission-provider": [
+      {
+        "adapter": "kotlin",
+        "value": "io.github.gunpowder.GunpowderPermissionProvider"
+      }
+    ]
+  },
+  "depends": {
+    "gunpowder-base": ">=${gunpowder}",
+    "fabricloader": ">=0.8.9",
+    "fabric": "*"
+  },
+  "breaks": {
+    "luckperms": "*"
+  },
+  "provides": [
+    "permissions"
+  ]
+}
