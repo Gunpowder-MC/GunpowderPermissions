@@ -1,5 +1,5 @@
 // Plugins
 plugins {
-    id 'io.github.gunpowder' version '0.3.0'
+    id 'io.github.gunpowder' version '0.3.2'
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.0'
 }

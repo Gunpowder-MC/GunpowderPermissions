@@ -100,8 +100,8 @@ object GroupCommand {
             if (rows.isEmpty()) {
                 "No members in group '$group' or group does not exist."
             } else {
-                val cache = context.source.minecraftServer.userCache
-                rows.joinToString("\n") { "- ${cache.getByUuid(it[GroupUsers.user])?.name ?: "Unknown user: ${it[GroupUsers.user]}"}" }
+                val cache = context.source.server.userCache
+                rows.joinToString("\n") { "- ${cache.getByUuid(it[GroupUsers.user]).orElse(null)?.name ?: "Unknown user: ${it[GroupUsers.user]}"}" }
             }
         }.thenAccept {
             context.source.sendFeedback(LiteralText(it), false)
